@@ -14,3 +14,10 @@ chat-app/
 ├── docker-compose.yml  
 └── README.md  
 ```
+
+## ✅ Assignment Steps
+
+### 1. 🌐 Launch an EC2 Instance
+
+  - Go to your AWS account → EC2 → Launch Instance
+  - Configure the instance as follows:
