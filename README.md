@@ -72,4 +72,57 @@ chat-app/
     newgrp docker
     ```                                
 
+### 4. ⚙️ Configuration Changes
+
+  - Setup Environment Variables
+    ```
+    cd backend
+    nano .env
+    ```
+    - Paste backend environment variables (MongoDB URI, PORT, JWT Secret and Cloudinary Credentials)
+    - Save with: Ctrl + O, Enter, then Ctrl + X.
+  - Update Frontend API URL
+    ```
+    nano docker-compose.yml
+    ```
+    - Change this line inside environment of frontend service:
+      ```
+      VITE_API_BASE_URL: "http://<ec2-ipv4-address>:5001/api"
+      ```
+  - Update CORS Origin in Backend
+    ```
+    cd backend/src
+    nano index.js
+    ```
+    - Replace this line:
+      ```
+      origin: "http://<ec2-ipv4 address>:5173"
+      ```
+  - Update Cookie Options in Backend
+    ```
+    cd lib
+    nano utils.js
+    ```
+    - Use:
+      ```
+      sameSite: "lax",
+      secure: false
+      ```
+
+### 5. 🐳 Run the Application
+
+Return to the root of the project and run:
+```
+docker-compose up --build
+```
+This builds and starts both frontend and backend containers.
+
+### 6. 🌍 Access the App
+
+Open your browser and go to:
+```
+http://<ec2-ipv4-address>:5173
+```
+
+
 
