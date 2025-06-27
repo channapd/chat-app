@@ -4,13 +4,13 @@ This project documents how I containerized and deployed a full-stack MERN chat a
 
 ## 📁 Project Structure
 ```
-chat-app/\
-├── backend/\
-│   ├── Dockerfile\
-│   └── ...\
-├── frontend/\
-│   ├── Dockerfile\
-│   └── ...\
-├── docker-compose.yml\
-└── README.md\
+chat-app/  
+├── backend/  
+│   ├── Dockerfile  
+│   └── ...  
+├── frontend/  
+│   ├── Dockerfile  
+│   └── ...  
+├── docker-compose.yml  
+└── README.md  
 ```
