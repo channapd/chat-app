@@ -38,3 +38,17 @@ chat-app/
   | Custom TCP | TCP | 5173 | 0.0.0.0/0 | Frontend |
 
   - Click Launch Instance
+
+### 2. 🔑 Connect to EC2 via SSH
+
+  - Go to EC2 Dashboard → Select your instance → Click Connect
+  - Choose the SSH Client tab
+  - Copy the connection command:
+    ```
+    ssh -i "chat-app.pem" ubuntu@<your-ec2-public-ip>
+    ```
+  - Open WSL or terminal:
+    ```
+    chmod 400 chat-app.pem         
+    ssh -i "chat-app.pem" ubuntu@<your-ec2-public-ip>
+    ```
