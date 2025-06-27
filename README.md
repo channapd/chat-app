@@ -21,3 +21,10 @@ chat-app/
 
   - Go to your AWS account → EC2 → Launch Instance
   - Configure the instance as follows:
+  | Configuration | Value |
+  | ------------- | ----- |
+  | Name          | chat-app-ec2 |
+  | AMI           | Ubuntu Server |
+  | Instance type | t2.micro |
+  | Key pair      | Create or use existing key |
+
