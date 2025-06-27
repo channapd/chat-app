@@ -29,3 +29,12 @@ chat-app/
   | Instance type | t2.micro                    |
   | Key pair      | Create or use existing key  |
 
+  - EC2 Inbound Security Rules
+
+  | Type | Protocol | Port Range | Source |    Description   |
+  | ---- | -------- | ---------- | ------ | ---------------- |
+  | SSH  |   TCP    |     22     |  My IP |  For SSH Access  |
+  | Custom TCP | TCP | 5001 | 0.0.0.0/0 | Backend  |
+  | Custom TCP | TCP | 5173 | 0.0.0.0/0 | Frontend |
+
+  - Click Launch Instance
