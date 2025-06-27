@@ -52,3 +52,24 @@ chat-app/
     chmod 400 chat-app.pem         
     ssh -i "chat-app.pem" ubuntu@<your-ec2-public-ip>
     ```
+
+### 3. 🛠 Install Dependencies on EC2
+
+  - Install Git
+    ```
+    sudo apt install -y git
+    ```
+  - Clone Repository
+    ```
+    git clone https://github.com/channapd/chat-app.git
+    cd chat-app
+    ```
+  - Install Docker & Docker Compose
+    ```
+    sudo apt install -y docker.io docker-compose
+    sudo systemctl start docker                  
+    sudo usermod -aG docker $USER                
+    newgrp docker
+    ```                                
+
+
